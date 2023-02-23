@@ -1,0 +1,99 @@
+:root {
+    --primary-color:#e26e70;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family:sans-serif ;
+    background:linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap__box{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-top:30px;
+    border-radius: 10px;
+    display: none;
+}
+.header__box{
+    display: flex;
+    color: white;
+    font-size: 20px;
+    height:50px;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    justify-content: space-between;
+    font-weight: 400;
+    border-radius: 10px 10px 0 0;
+}
+i{  
+    font-size: 25px;
+    font-weight: 400;
+}
+.body__box {
+        height: 100px;
+        background-color: white;
+        border: unset;
+}
+.body__modal{
+    color:var(--primary-color);
+    font-size: 30px;
+    padding: 20px 0 0 10px;
+    font-weight: bold;
+}
+.body__modal__content{
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+}
+.root__box{
+display: flex;
+justify-content: flex-end;
+background-color: white;
+border-radius: 0 0 10px 10px;
+border: unset;
+}
+.box__button{
+    background-color: var(--primary-color);
+    margin: 10px 10px 10px 0 ;
+    padding: 10px  ;
+    width: 70px;
+    border-radius: 5px;
+    color: white;
+    border: unset;
+}
+
+.main__button{
+    width: 200px;
+    height: 70px;
+    background-color: white;
+    padding: 10px;
+    font-size:20px ;
+    border-radius: 10px;
+    border: unset;
+}
+.main__button:hover {
+    opacity: 0.7;
+}
+.main__button:focus + .wrap__box {
+    /* set the translateY property to 0 to move the box onto the screen */
+    animation: modal__Show 1s ease-in-out;
+  }
+
+  @keyframes modal__Show {
+    from {
+        top:30%;
+        opacity: 0;
+    }
+    to{
+        top:50%;
+        opacity: 1;
+    }
+  }
